@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MultiBrowserTesting" parallel="classes">
+ <parameter name="browser" value="chrome"></parameter>
+  <test name="ChromeTest">
+    <classes>
+    
+    <!--Consist of multiple classes -->
+      <class name="demoproject.ManageNewsTest"></class>
+      <class name="demoproject.LoginTest"></class>
+       <!--Consist Block Ends -->
+      
+    </classes>
+  </test>
+</suite>

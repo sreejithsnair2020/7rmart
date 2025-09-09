@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="ParallelTesting" parallel="tests"> <!--all <test> blocks inside this suite will run at the same time (in parallel). -->
+
+ <parameter name="browser" value="chrome"></parameter> <!-- ChromeTest1 & ChromeTest2 runs in chrome browser -->
+  
+   <!-- Test Block Start-->
+  <test name="ChromeTest1">
+    <classes>
+      <class name="demoproject.ManageNewsTest"/>  
+    </classes>
+  </test>
+  
+   <test name="ChromeTest2">
+    <classes>
+      <class name="demoproject.LoginTest"></class>
+    </classes>
+  </test>
+<!-- Test Block End-->
+
+</suite>
