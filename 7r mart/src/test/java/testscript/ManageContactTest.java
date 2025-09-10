@@ -25,11 +25,10 @@ public class ManageContactTest extends Base {
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.enterUsername(loginUserName)
-                 .enterPassword(loginPassword)
-                 .signin();
-
-        // Navigate to Manage Contact
-        logoutpage = new LogoutPage(driver);
+                 .enterPassword(loginPassword);
+          logoutpage=loginPage.signin();
+          
+                 
 
         // ensure this returns page object (match your method name)
         managecontactpage = logoutpage.clickManageContactMoreInfo();

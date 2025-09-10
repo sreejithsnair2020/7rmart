@@ -22,7 +22,8 @@ public class ManageFooterTextTest extends Base {
 		String loginUserName = ExcelUtility.getStringData(1, 0, "Loginpage");
 		String loginPassword = ExcelUtility.getStringData(1, 1, "Loginpage");
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.enterUsername(loginUserName).enterPassword(loginPassword).signin();
+		loginPage.enterUsername(loginUserName).enterPassword(loginPassword);
+		logoutpage=loginPage.signin();
 
 		ManageFooterTextPage managefootertextpage = new ManageFooterTextPage(driver);
 
